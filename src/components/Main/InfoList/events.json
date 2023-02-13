@@ -1,0 +1,21 @@
+
+[
+    {
+        "eventName": "Limbo",
+        "info": "Bailar hasta gastarse las caderas",
+        "price": 50,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Folk_Music_%26_Limbo_Dance_C_IMG_2636.JPG/1200px-Folk_Music_%26_Limbo_Dance_C_IMG_2636.JPG"
+    },
+    {
+        "eventName": "Baile de máscaras",
+        "info": "Baile misterioso, ¿Quién será tu pareja?",
+        "price": 100,
+        "image": "https://cdn.pixabay.com/photo/2016/03/27/17/14/venetian-mask-1283163_960_720.jpg"
+    },
+    {
+        "eventName": "Concuro de disfraces",
+        "info": "¿Quién será el mas payaso? Atrevete con todos los colores y gana tu premio",
+        "price": 95,
+        "image":"https://luminososfluorescentes.com/img/cms/carnaval-ideas-disfraces.jpg"
+    }
+]
