@@ -7,14 +7,18 @@ class InfoItem extends Component {
     super(props)
 
     this.state = {
-      text:this.props.text || "evento carnaval"
+      event:this.props.data 
     }
   }
 
   render() {
     return (<article>
-      <p><b>Info:</b> {this.state.text}</p>
-      <img className="img_event" src={this.props.url} alt="" />
+      <h1>Event</h1>
+      <p>{this.props.data.eventName}</p>
+      <img src={this.props.data.image} alt="imagen de evento" className="img_event"/>
+      <p>{this.props.data.info}</p>
+      <p>{this.props.data.price}</p>
+      <button onClick={this.props.remove}>Delete</button>
       </article>
     )
   }
