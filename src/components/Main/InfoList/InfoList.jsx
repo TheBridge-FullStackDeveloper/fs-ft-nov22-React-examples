@@ -97,7 +97,12 @@ class InfoList extends Component {
       </article>
     }
   }
-
+componentDidMount() { 
+  // peticiones HTTP
+  // peticiones asíncronas
+  // llamada con fetch() o axios() o xhr() o request(), etc....
+  // renderiza los cambios en el DOM --> hacer un setState con los datos
+ }
 
   render() {
     return <section>
