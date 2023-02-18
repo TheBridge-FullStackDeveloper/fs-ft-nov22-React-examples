@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import InfoItem from './InfoItem';
 import data from './events.json';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 import { v4 as uuidv4 } from 'uuid';
+
+
+
+
 
 class InfoList extends Component {
   constructor(props) {
@@ -97,43 +103,74 @@ class InfoList extends Component {
       </article>
     }
   }
-componentDidMount() { 
-  // peticiones HTTP
-  // peticiones asíncronas
-  // llamada con fetch() o axios() o xhr() o request(), etc....
-  // renderiza los cambios en el DOM --> hacer un setState con los datos
- }
+  componentDidMount() {
+    // peticiones HTTP
+    // peticiones asíncronas
+    // llamada con fetch() o axios() o xhr() o request(), etc....
+    // renderiza los cambios en el DOM --> hacer un setState con los datos
+  }
 
   render() {
     return <section>
 
       {this.manageUser()}
 
-      <article>
+      <article className="form-add-event">
         <h2>Añadir eventos</h2>
+
+
+
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="name">Nombre:</label><br />
-          <input type="text" id="name" name="name" onChange={this.handleChange} /><br />
-          <label htmlFor="info">Info:</label><br />
-          <input type="text" id="info" name="info" /><br />
-          <label htmlFor="price">Precio:</label><br />
-          <input type="number" id="price" name="price" /><br />
-          <label htmlFor="image">URL imágen:</label><br />
-          <input type="url" id="image" name="image" /><br />
+          <Box
+            component="form"
+            sx={{
+              '& .MuiTextField-root': { m: 1, width: '25ch' },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <TextField
+              required
+              id="name"
+              label="Required"
+              defaultValue="Event Name"
+              onChange={this.handleChange}
+            />
+            <TextField
+              required
+              id="info"
+              label="Required"
+              defaultValue="Info"
+            />
+            <TextField
+              required
+              id="price"
+              label="Required"
+              defaultValue="Price"
+            />
+            <TextField
+              required
+              id="image"
+              label="Required"
+              defaultValue="Image URL"
+            />
+
+          </Box>
+
           <input type="submit" value="Añadir" />
         </form>
         {this.state.newEventName ? <p>Nuevo evento a crear: {this.state.newEventName}</p> : ""}
 
       </article>
 
-      <article>
+      <article className="button-set">
         <h2>Opciones</h2>
         <button onClick={this.addEvent}>Add Event</button>
         <button onClick={this.removeAllEvents}>Remove All Events</button>
-        <button onClick={this.restoreEvents}>Restore Events</button>
+        <button onClick={this.restoreEvents} disabled={this.state.events.length > 0 ? true : false}>Restore Events</button>
       </article>
 
-      <article>
+      <article className="event-container">
         <h2>Nuestros eventos</h2>
         {this.printCards()}
       </article>
