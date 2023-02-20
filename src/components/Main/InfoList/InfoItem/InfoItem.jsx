@@ -40,7 +40,7 @@ class InfoItem extends Component {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Share</Button>
+          <Button size="small" onClick={this.props.remove}>Delete</Button>
           <Button size="small">Learn More</Button>
         </CardActions>
       </Card>
