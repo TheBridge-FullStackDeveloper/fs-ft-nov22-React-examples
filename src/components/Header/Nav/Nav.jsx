@@ -12,9 +12,11 @@ class Nav extends Component {
       <Link to="/">Home</Link>
       <Link to="/infolist">Info List</Link>
       <Link to="/staff" >Staff</Link>
+      <Link to="/donations" >Donations</Link>
+      <Link to="/topic" >Topic</Link>
 
       <userContext.Consumer>
-        {({logout, user }) => user ?
+        {({ logout, user }) => user ?
           <span>Hola, {user} <Button variant="contained" size="small" onClick={logout}>Logout</Button></span>
           : ""
         }
