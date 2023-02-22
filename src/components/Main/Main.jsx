@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React from 'react';
 import { Routes, Route } from "react-router-dom";
+import { useContext } from 'react';
 
 import About from './About';
 import Contact from './Contact';
@@ -8,11 +9,16 @@ import InfoList from './InfoList';
 import Staff from './Staff';
 import Donations from './Donations';
 import Topic from './Topic';
+import Djs from './Djs';
 import NotFound from '../NotFound';
 
-class Main extends Component {
-  render() {
-    return <main>
+import { themeContext } from '../../context/themeContext'; //contexto
+
+function Main() {
+  const { theme } = useContext(themeContext);
+
+  return (
+    <main className={"main"+theme}>
       <h1>Welcome to the carnival</h1>
       <Routes>
         <Route path="/about" element={<About />} />
@@ -22,10 +28,11 @@ class Main extends Component {
         <Route path="/staff" element={<Staff />} />
         <Route path="/donations" element={<Donations />} />
         <Route path="/topic" element={<Topic />} />
+        <Route path="/djs" element={<Djs />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
-    </main>;
-  }
+    </main>
+  )
 }
 
-export default Main;
+export default Main

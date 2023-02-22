@@ -1,0 +1,36 @@
+@import '../utils/variables.scss';
+
+%nav-bar-basic{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+
+    &>*{
+        color:white;
+    }
+
+    &>a {
+        text-decoration: none;
+
+        &:hover{
+            color:$pale-orange;
+        }
+    }
+    &>span{
+        font-weight: bold; 
+    }
+}
+
+.nav-bar {
+    @extend %nav-bar-basic;
+    background-color: $granate;
+}
+
+.nav-bar__dark{
+    @extend %nav-bar-basic;
+    background-color: $purple;
+
+}
+
+
+
