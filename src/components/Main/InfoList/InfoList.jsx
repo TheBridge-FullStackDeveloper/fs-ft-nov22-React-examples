@@ -111,7 +111,7 @@ class InfoList extends Component {
   }
 
   render() {
-    return <section>
+    return <section className="infolist">
 
       {this.manageUser()}
 

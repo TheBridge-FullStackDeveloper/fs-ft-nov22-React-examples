@@ -1,0 +1,43 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+
+.infolist {
+
+    &>.form-add-event {
+        margin: auto;
+        max-width: 40vh;
+
+        &>form {
+            @include column-center;
+        }
+    }
+
+    &>.event-container {
+        @include column-center;
+
+        &>section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+    }
+
+
+    &>.button-set {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+
+
+
+        &>button {
+            @include green-button;
+        }
+
+    }
+
+}
