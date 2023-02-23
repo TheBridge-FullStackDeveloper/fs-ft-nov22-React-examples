@@ -1,10 +1,26 @@
 import React from "react";
-import { shallow } from "enzyme";
 import Footer from "./Footer";
+import { render, screen } from "@testing-library/react";
+
+import { themeContext } from '../../context/themeContext'; //contexto
+
 
 describe("Footer", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<Footer />);
-    expect(wrapper).toMatchSnapshot();
+
+    let theme ="__dark";
+    const toggleTheme = () => theme === "" ? setTheme("__dark") : setTheme("")
+
+    const themeData = {
+      theme, //"__dark" o ""
+      toggleTheme
+    }
+
+    render(
+      <themeContext.Provider value={themeData}>
+        <Footer />
+      </themeContext.Provider>
+    );
+    expect(screen).toMatchSnapshot();
   });
 });

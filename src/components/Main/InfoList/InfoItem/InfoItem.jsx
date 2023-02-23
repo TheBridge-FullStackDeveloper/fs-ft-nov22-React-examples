@@ -33,10 +33,10 @@ class InfoItem extends Component {
             {this.props.data.info}
           </Typography>
           <Typography>
-            <p>{this.props.data.info}</p>
+            {this.props.data.info}
           </Typography>
           <Typography>
-            <p>{this.props.data.price}</p>
+            {this.props.data.price}
           </Typography>
         </CardContent>
         <CardActions>

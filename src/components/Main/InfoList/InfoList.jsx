@@ -118,10 +118,7 @@ class InfoList extends Component {
       <article className="form-add-event">
         <h2>Añadir eventos</h2>
 
-
-
-        <form onSubmit={this.handleSubmit}>
-          <Box
+          <Box onSubmit={this.handleSubmit}
             component="form"
             sx={{
               '& .MuiTextField-root': { m: 1, width: '25ch' },
@@ -154,11 +151,11 @@ class InfoList extends Component {
               label="Required"
               defaultValue="Image URL"
             />
+          <input type="submit" value="Añadir" />
 
           </Box>
 
-          <input type="submit" value="Añadir" />
-        </form>
+        
         {this.state.newEventName ? <p>Nuevo evento a crear: {this.state.newEventName}</p> : ""}
 
       </article>
