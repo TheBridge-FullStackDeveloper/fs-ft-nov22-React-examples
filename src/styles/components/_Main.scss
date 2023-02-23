@@ -1,7 +1,18 @@
-.main{
-    background-color:$light-green;
+.main {
+    background-color: $light-green;
+    min-height: 80vh;
+    margin:0px;
+    padding:15px;
+
+    &__dark {
+        @extend .main;
+        background-color: $brown;
+        
+    }
+    &>h1{
+        margin:0px;
+        padding-top:15px;
+    }
+
 }
 
-.main__dark{
-    background-color: $brown;
-}

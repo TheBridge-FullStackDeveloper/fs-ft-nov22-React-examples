@@ -1,11 +1,10 @@
 @import '../utils/mixins.scss';
 
+.donations {
+    @include column-center;
 
-
-.form-add-event {
-    margin:auto;
-    max-width: 40vh;
     &>form{
         @include column-center
     }
+
 }
