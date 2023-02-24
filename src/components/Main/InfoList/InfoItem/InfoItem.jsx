@@ -19,7 +19,7 @@ class InfoItem extends Component {
 
   render() {
     return (
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ width:'300px' }}>
         <CardMedia
           sx={{ height: 140 }}
           image={this.props.data.image}

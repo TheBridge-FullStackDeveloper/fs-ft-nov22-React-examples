@@ -7,6 +7,7 @@
     align-items: center;
     min-height:15vh;
     color:white;
+    margin:0px;
 }
 
 .footer{
@@ -17,6 +18,10 @@
 .footer__dark{
     @extend %footer-bar-basic;
     background-color: $purple;
+
 }
 
 
+ul{
+    margin:0px;
+}
