@@ -10,6 +10,7 @@ import Staff from './Staff';
 import Donations from './Donations';
 import Topic from './Topic';
 import Djs from './Djs';
+import PruebaRedux from './PruebaRedux';
 import NotFound from '../NotFound';
 
 import { themeContext } from '../../context/themeContext'; //contexto
@@ -29,6 +30,7 @@ function Main() {
         <Route path="/donations" element={<Donations />} />
         <Route path="/topic" element={<Topic />} />
         <Route path="/djs" element={<Djs />} />
+        <Route path="/redux" element={<PruebaRedux />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </main>

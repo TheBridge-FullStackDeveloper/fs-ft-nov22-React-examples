@@ -20,6 +20,7 @@ function Nav() {
       <Link to="/donations" >Donations</Link>
       <Link to="/topic" >Topic</Link>
       <Link to="/djs" >Djs</Link>
+      <Link to="/redux" >Redux</Link>
 
       <userContext.Consumer>
         {({ logout, user }) => user ?

@@ -2,9 +2,12 @@ import Header from './components/Header'
 import Footer from './components/Footer';
 import Main from './components/Main';
 import { BrowserRouter } from 'react-router-dom';
+import { useState } from 'react';
+import { Provider } from 'react-redux'
+import store from './redux/store'
 import { userContext } from './context/userContext'; // contexto
 import { themeContext } from './context/themeContext'; // contexto
-import { useState } from 'react';
+
 
 function App() {
 
@@ -29,17 +32,17 @@ function App() {
 
   return (
     <div className="App">
-
-      <themeContext.Provider value={themeData}>
-        <BrowserRouter>
-          <userContext.Provider value={data}>
-            <Header />
-            <Main />
-          </userContext.Provider>
-        </BrowserRouter>
-        <Footer />
-      </themeContext.Provider>
-
+      <Provider store={store}>
+        <themeContext.Provider value={themeData}>
+          <BrowserRouter>
+            <userContext.Provider value={data}>
+              <Header />
+              <Main />
+            </userContext.Provider>
+          </BrowserRouter>
+          <Footer />
+        </themeContext.Provider>
+      </Provider>
     </div>
   );
 }
