@@ -5,6 +5,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { userContext } from './context/userContext'; // contexto
 import { themeContext } from './context/themeContext'; // contexto
 import { useState } from 'react';
+import {Provider} from 'react-redux'
+import store from './redux/store'
+
 
 function App() {
 
@@ -29,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-
+      <Provider store={store}>
       <themeContext.Provider value={themeData}>
         <BrowserRouter>
           <userContext.Provider value={data}>
@@ -39,6 +42,7 @@ function App() {
         </BrowserRouter>
         <Footer />
       </themeContext.Provider>
+      </Provider>
 
     </div>
   );
