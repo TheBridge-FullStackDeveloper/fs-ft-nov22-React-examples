@@ -12,9 +12,9 @@ function Nav() {
 
   return (
     <nav className={"nav-bar"+theme}>
+      <Link to="/">Home</Link>
       <Link to="/about">About</Link>
       <Link to="/contact">Contact</Link>
-      <Link to="/">Home</Link>
       <Link to="/infolist">Info List</Link>
       <Link to="/staff" >Staff</Link>
       <Link to="/donations" >Donations</Link>
