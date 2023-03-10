@@ -1,6 +1,5 @@
 import React from 'react';
 // import useWindowSize from 'react-use/lib/useWindowSize'
-import Confetti from 'react-confetti'
 import { Routes, Route } from "react-router-dom";
 import { useContext } from 'react';
 
@@ -36,10 +35,6 @@ function Main() {
         <Route path="/redux" element={<PruebaRedux />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
-      <Confetti
-      width={window.innerWidth}
-      height={window.innerHeight}
-    />
     </main>
   )
 }

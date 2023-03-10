@@ -8,6 +8,8 @@ import store from './redux/store'
 import { userContext } from './context/userContext'; // contexto
 import { themeContext } from './context/themeContext'; // contexto
 import ReactPlayer from "react-player"
+import Confetti from 'react-confetti'
+
 
 function App() {
 
@@ -50,6 +52,12 @@ function App() {
         height={100}
         loop={true}
       />
+            <Confetti
+      width={window.innerWidth}
+      height={window.innerHeight}
+      wind={0}
+      numberOfPieces={150}
+    />
 
     </div>
   );

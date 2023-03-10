@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+
+test('renders App', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Welcome to the carnival/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.find(".audio_player")).toExist();
 });
