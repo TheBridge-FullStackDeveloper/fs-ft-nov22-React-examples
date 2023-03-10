@@ -48,6 +48,7 @@ function App() {
         url="https://soundcloud.com/nieves-sanz-romero/georgie-dann-carnaval-carnaval?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         width={200}
         height={100}
+        loop={true}
       />
 
     </div>
