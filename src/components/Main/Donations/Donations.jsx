@@ -37,7 +37,7 @@ function Donations() {
 
   return (
     <section className="donations">
-      <h1>Donaciones</h1>
+      <h1>Donations</h1>
 
       <h3>Cantidad: {count}</h3>
       <div>
