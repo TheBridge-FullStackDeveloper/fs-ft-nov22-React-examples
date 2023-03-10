@@ -3,6 +3,6 @@ import App from './App';
 
 
 test('renders App', () => {
-  // render(<App />);
-  // expect(screen.find(".audio_player")).toExist();
+  render(<App />);
+  expect(screen.find(".audio_player")).toExist();
 });
