@@ -5,11 +5,12 @@ import UserContainer from './UserContainer'
 
 function PruebaRedux() {
     return (
-        <div>
+        <section>
+            <h1>Prueba Redux</h1>
             <CounterContainer/>
             <MessageContainer/>
             <UserContainer/>
-        </div>
+        </section>
     )
 }
 

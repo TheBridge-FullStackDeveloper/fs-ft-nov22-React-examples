@@ -1,10 +1,16 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, screen } from "@testing-library/react";
+import { Provider } from 'react-redux'
+import store from '../../../../redux/store'
+
 import UserContainer from "./UserContainer";
 
 describe("UserContainer", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<UserContainer />);
-    expect(wrapper).toMatchSnapshot();
+    render(
+    <Provider store={store}>
+      <UserContainer />
+    </Provider>);
+    expect(screen).toMatchSnapshot();
   });
 });

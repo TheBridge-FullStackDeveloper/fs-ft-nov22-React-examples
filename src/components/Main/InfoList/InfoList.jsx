@@ -5,10 +5,6 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { v4 as uuidv4 } from 'uuid';
 
-
-
-
-
 class InfoList extends Component {
   constructor(props) {
     super(props)
@@ -112,56 +108,56 @@ class InfoList extends Component {
 
   render() {
     return <section className="infolist">
-
+      <h1>Events</h1>
       {this.manageUser()}
 
       <article className="form-add-event">
         <h2>Añadir eventos</h2>
 
-          <Box onSubmit={this.handleSubmit}
-            component="form"
-            sx={{
-              '& .MuiTextField-root': { m: 1, width: '25ch' },
-            }}
-            noValidate
-            autoComplete="off"
-          >
-            <TextField
-              required
-              id="name"
-              label="Required"
-              defaultValue="Event Name"
-              onChange={this.handleChange}
-            />
-            <TextField
-              required
-              id="info"
-              label="Required"
-              defaultValue="Info"
-            />
-            <TextField
-              required
-              id="price"
-              label="Required"
-              defaultValue="Price"
-            />
-            <TextField
-              required
-              id="image"
-              label="Required"
-              defaultValue="Image URL"
-            />
-          <input type="submit" value="Añadir" />
+        <Box onSubmit={this.handleSubmit}
+          component="form"
+          sx={{
+            '& .MuiTextField-root': { m: 1, width: '25ch' },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <TextField
+            required
+            id="name"
+            label="Required"
+            defaultValue="Event Name"
+            onChange={this.handleChange}
+          />
+          <TextField
+            required
+            id="info"
+            label="Required"
+            defaultValue="Info"
+          />
+          <TextField
+            required
+            id="price"
+            label="Required"
+            defaultValue="Price"
+          />
+          <TextField
+            required
+            id="image"
+            label="Required"
+            defaultValue="Image URL"
+          />
+          <button type="submit">Create event</button>
+          <br />
+        </Box>
 
-          </Box>
 
-        
         {this.state.newEventName ? <p>Nuevo evento a crear: {this.state.newEventName}</p> : ""}
 
       </article>
 
       <article className="button-set">
-        <h2>Opciones</h2>
+
         <button onClick={this.addEvent}>Add Event</button>
         <button onClick={this.removeAllEvents}>Remove All Events</button>
         <button onClick={this.restoreEvents} disabled={this.state.events.length > 0 ? true : false}>Restore Events</button>

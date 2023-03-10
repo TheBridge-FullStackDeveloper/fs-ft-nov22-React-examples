@@ -1,10 +1,18 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, screen } from "@testing-library/react";
+import { Provider } from 'react-redux'
+import store from '../../../../redux/store'
+
 import CounterContainer from "./CounterContainer";
 
 describe("CounterContainer", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<CounterContainer />);
-    expect(wrapper).toMatchSnapshot();
+    render(
+      <Provider store={store}>
+          <CounterContainer />
+      </Provider>
+
+    );
+    expect(screen).toMatchSnapshot();
   });
 });
