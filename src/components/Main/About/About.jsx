@@ -9,13 +9,15 @@ const About = () => {
   }
 
   return (
-    <div>
+    <section>
+      <h1>About</h1>
+      <h2>Probando testing</h2>
       <Button increment={1} onClickFunction={incrementCount} />
       <Button increment={10} onClickFunction={incrementCount} />
       <Button increment={100} onClickFunction={incrementCount} />
       <Button increment={1000} onClickFunction={incrementCount} />
       <span>{count}</span>
-    </div>
+    </section>
   )
 };
 

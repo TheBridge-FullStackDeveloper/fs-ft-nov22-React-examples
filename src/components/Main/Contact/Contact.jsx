@@ -44,7 +44,7 @@ class Contact extends Component {
 
   render() {
     return <section className="contact">
-      <h1>Contacto</h1>
+      <h1>Contact</h1>
       <form onSubmit={this.sendForm}>
         <label htmlFor="name">Nombre:</label>
         <input type="text" id="name" name="name" /><br />

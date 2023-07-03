@@ -32,11 +32,12 @@ class Staff extends Component {
   render(){
     // const lista = [{ name: 'pokeapi', ulr: 'https://pokeapi.co/' }]
       return (
-          <>
+          <section>
+            <h1>Staff</h1>
             <button onClick={this.handleClick}>Change Props from father</button>
             <button onClick={this.handleShow}>{this.state.show ? 'Ocultar' : 'Mostrar'}</button>
             { this.state.mostrar ? <PokeList defaultList={this.state.lista}/> : null }
-          </>
+          </section>
       );
   }
 }

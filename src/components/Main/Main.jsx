@@ -1,4 +1,5 @@
 import React from 'react';
+// import useWindowSize from 'react-use/lib/useWindowSize'
 import { Routes, Route } from "react-router-dom";
 import { useContext } from 'react';
 
@@ -16,11 +17,12 @@ import NotFound from '../NotFound';
 import { themeContext } from '../../context/themeContext'; //contexto
 
 function Main() {
+  // const { width, height } = useWindowSize()
+
   const { theme } = useContext(themeContext);
 
   return (
     <main className={"main"+theme}>
-      <h1>Welcome to the carnival</h1>
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
